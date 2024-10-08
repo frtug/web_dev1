@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best HTML Select Example</title>
+  <style>
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Choose Your Favorite Programming Language</h2>
+
+  <form>
+    <label for="languages">Select a language:</label><br><br>
+
+    <select id="languages" name="languages" required>
+      <!-- Placeholder option -->
+      <option value="" disabled selected>Select a programming language</option>
+
+      <!-- Group of options -->
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="csharp">C#</option>
+      </optgroup>
+
+    
+
+      <!-- Disabled option -->
+    </select>
+  </form>
+
+</body>
+</html>

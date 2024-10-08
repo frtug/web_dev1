@@ -1,0 +1,15 @@
+
+.container{
+    background-color: yellowgreen;
+    width:98%;
+    height:100px;
+}
+.left{
+    float:left;
+}
+.cover{
+    width:50px;
+}
+.right{
+    float:right;
+}

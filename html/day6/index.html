@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* write all the css  and it will run first before loading any html code*/
+        *{
+           margin:0;
+           padding: 0;
+           box-sizing: border-box; 
+           
+        }
+        body{
+            background-color: beige;
+        }
+        #myCanvas{
+            border:2px solid blue;
+            background-color: antiquewhite;
+            color:black;
+        }
+
+    </style>
+    <script src="./main.js" defer>
+            
+    </script>
+</head>
+<body>
+<!--     
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet 
+        10:45 consectetur adipisicing elit. 
+        Exercitationem quod possimus fugit labore odit itaque. Eius, voluptatem? 
+        Cum magnam dolorum incidunt 
+        aut, neque quis id adipisci illum fugiat! Laboriosam, id?</p>
+
+        <label for="file">Downloded </label>
+        <progress id="file" value="50" max="200"> 50</progress>
+
+        <label for="usage">Disks</label> -->
+        <!-- <canvas id="myCanvas" height="500px" width="500px">
+            Your browser does not support the HTML canvas tag.
+        </canvas> -->
+        <canvas id="myCanvas2" height="500px" width="500px">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+        <select id="do_sel" >
+            <option  value="png" >PNG</option>
+            <option value="jpg" > JPG</option>
+
+        </select>
+        <a id='gf' download="image.png" > DownLoad</a>
+        <!-- <a id="dl" download="canvas.png">Png</a> -->
+        &nbsp
+
+        
+
+</body>
+</html>

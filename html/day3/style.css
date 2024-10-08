@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(250, 238, 250);
+}
+
+
+table{
+    width:100%;
+    /* border-collapse: collapse; */
+    border-collapse: collapse;
+}
+td,th{
+    border:1px solid red;
+    padding: 20px;
+
+}
+#table2{
+    width:50%;
+}
+table:nth-child(even){
+    background-color: bisque;
+}
+
+/* #table2 {
+    border:1px solid blue;
+th, td {
+    border:1px solid red
+}
+} */
+/* #table2 th,
+#table2 td{
+    border:1px solid blue;
+} */
+
+.Fullstack_table{
+    width:80%;
+}

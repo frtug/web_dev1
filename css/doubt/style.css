@@ -1,0 +1,112 @@
+/* *{
+    margin:0;
+    padding:0;
+    left:0;
+} */
+/* h1:first-of-type{
+    color: aqua;
+}
+p:last-of-type::first-letter{
+    font-size:30px;
+}
+p::first-line{
+    color:chocolate
+}
+p:first-child{
+    color:violet
+}
+div:last-child{
+  color: yellow;  
+} */
+/* 
+ div ~ p{
+    color:yellowgreen
+ } */
+/* 
+p:nth-of-type(2){
+    color:red;
+} */
+ /* input{
+    background-color: yellowgreen;
+    color: aliceblue;
+ }
+ form{
+    accent-color: yellow;
+ }
+[type=radio]{
+    accent-color:inherit;
+    background-color:blue;
+}
+[type=checkbox]:checked + label{
+    font-weight: 800;
+}
+p:last-child::before{
+    content: '" ';
+    color:rgb(62, 60, 60);
+    font-size: x-large;
+}
+p:last-child::after{
+    content: '" ';
+    color:rgb(62, 60, 60);
+    font-size: x-large;
+} */
+
+/* div ul li:first-child > p{
+    color: aqua;
+} */
+
+/* .name ~ li{
+    color: aqua;
+} */
+ /* li + li {
+    color:aqua
+} */
+/* ul{
+    list-style-type: none;
+
+} */
+ /* div > ul > li:not(:first-child)::before{
+    content: " * ";
+}  */
+
+
+div{
+    position:relative;
+    padding: 20px;
+}
+div p::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 1px;
+    top: 3px;
+     width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color:rgb(13, 255, 0)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

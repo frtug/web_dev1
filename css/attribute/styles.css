@@ -1,0 +1,65 @@
+/* input{
+    border:3px solid blue;
+}
+input[type]{
+    border:3px solid rgb(51, 221, 53);
+}
+input[type="text"]{
+    border:3px solid rgb(196, 19, 175);
+}
+
+[class~="hello" i]{
+    border:2px solid navajowhite
+}
+div[class~="hello" i]{
+    border:2px solid navajowhite
+} */
+/* 
+[href^="https"]{
+    color:green;
+}
+[href^="http"]{
+    color:green;
+}
+
+[href$=".com"]{
+    color:green;
+}
+
+[href$=".in"]{
+    color:rgb(138, 29, 61);
+} */
+/* [lang|="sp"]{
+    background-color:aquamarine
+} */
+/* a + p{
+    color:aqua
+}
+p ~ a{
+    color:rgb(216, 230, 29)
+
+} */
+/* p:hover{
+    color:aqua;
+} */
+a[href]{
+    color:rgb(232, 134, 163);
+} 
+
+
+input:focus{
+    outline: none;
+    border: 2px solid black
+}
+
+div:nth-child(odd){
+    color:rgb(89, 130, 89);
+}
+
+
+
+
+
+
+
+

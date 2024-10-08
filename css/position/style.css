@@ -1,0 +1,60 @@
+/* /* div{
+    postion:static;
+} */
+
+/* p{
+    position: relative;
+    left: 100px;
+ right: 300px;
+ bottom: 50px;
+    top: 100px; 
+} 
+    */
+
+/* img{
+    position: absolute;
+    right:10px ;
+ right: 300px;
+ bottom: 10px;
+    border-radius: 50%;
+    top: 0; 
+}  */
+
+/* img{
+    
+    position: fixed;
+    z-index: 10000;
+    right:10px;
+    bottom: 10px; 
+    border-radius: 50%;
+} */
+
+/* img{
+} */
+.para{
+    background-color: rgb(212, 150, 68);
+    width:100vw;
+    height:300px;
+    margin-top:30px;
+    /* opacity: 0.5; */
+    position:relative;
+    background-image: url("https://picsum.photos/200/300");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1
+}
+.para::after{
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:300px;
+    opacity: 0.4;
+    z-index:1
+}
+.child{
+    position: relative;
+    z-index: 2;
+}

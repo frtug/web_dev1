@@ -1,0 +1,41 @@
+@font-face {
+    font-family: abhi;
+    src: url('./JacquardaBastarda9-Regular.ttf');
+}
+body{
+
+}
+div{
+
+    width:500px;
+}
+h1{
+    color:rgb(36, 123, 198);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:oblique;
+    background:yellow;
+    text-align: left;
+
+}
+p{
+    text-align: justify;
+    font-family: abhi,cursive,sans-serif;
+
+}
+h2{
+    text-align: justify;
+    /* text-decoration:  underline dotted red 5px; */
+    /* text-transform: capitalize; */
+    /* text-decoration-style: dotted; */
+    /* word-spacing:30px */
+    font-family: JacquardaBastarda9,cursive;
+    /* border-style: solid; */
+    border:20px solid black;
+    /* border-color: rgb(43, 109, 166); */
+
+    border-width: 10px 20px 40px 20px;
+
+}
+
+
+

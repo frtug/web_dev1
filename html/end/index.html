@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Best practices</title>
+	<script>
+		function functionClick(){
+			var name = prompt("Enter your name")
+			var age = prompt(`Okay ${name}, Tell me Your age `)
+
+		}
+	</script>
+</head>
+<body>
+	<div > 
+		<h1>Lets discuss aria labels </h1>
+		<p>Here for the learning</p>
+	</div>
+	<div role="button" tabindex="-1" onClick="functionClick()">
+		Click me 
+	</div>
+	<div role="dialog" aria-labelledby="dialogTitle" aria-modal="true">
+		<h2 id="dialogTitle">Dialog Title</h2>
+		<button onclick="closeDialog()">Close</button>
+	</div>
+	<nav role="inline-navigation">
+		<ul>
+		  <li><a href="#home">Home</a></li>
+		  <li><a href="#about">About</a></li>
+		</ul>
+	  </nav>
+
+	  <main role="main">
+		<h1>Main Content</h1>
+		<p>This is the primary content of the page.</p>
+	  </main>
+
+	  <button aria-label="Close" >X</button>
+	  <div aria-hidden="true">This is hidden from screen readers</div>
+
+	  <div itemscope itemtype="http://schema.org/Book">
+		<h2 itemprop="name">The Catcher in the Rye</h2>
+		<p>Author: <span itemprop="author">J.D. Salinger</span></p>
+		<p>Published: <span itemprop="datePublished">1951</span></p>
+		<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+		  <p>Rating: <span itemprop="ratingValue">4.1</span> out of 5</p>
+		  <p>Votes: <span itemprop="reviewCount">879</span></p>
+		</div>
+		<img itemprop="image" src="catcher-in-the-rye.jpg"  alt="The Catcher in the Rye cover image">
+	  </div>
+	  <img width="100%"  src="https://www.w3schools.com/w3images/rocks.jpg" loading="lazy" alt="The Catcher in the Rye cover image">
+	  <button aria-label="Close" >X</button>
+	  <div aria-hidden="true">This is hidden from screen readers</div>
+
+	  <img width="100%"  src="https://www.w3schools.com/w3images/rocks.jpg" loading="lazy" alt="The Catcher in the Rye cover image">
+	  <button aria-label="Close" >X</button>
+	  <div aria-hidden="true">This is hidden from screen readers</div>
+
+	  <img width="100%"  src="https://www.w3schools.com/w3images/rocks.jpg" loading="lazy" alt="The Catcher in the Rye cover image">
+	  <button aria-label="Close" >X</button>
+	  <div aria-hidden="true">This is hidden from screen readers</div>
+
+
+	  <img width="100%"  src="https://www.w3schools.com/w3images/paris.jpg" loading="lazy" alt="The Catcher in the Rye cover image">
+	  <button aria-label="Close" >X</button>
+	  <div aria-hidden="true">This is hidden from screen readers</div>
+
+	  <img width="100%"  src="https://www.w3schools.com/nature.jpg" loading="lazy" alt="The Catcher in the Rye cover image">
+	  <button aria-label="Close" >X</button>
+	  <div aria-hidden="true">This is hidden from screen readers</div>
+
+	  <img width="100%"  src="https://www.w3schools.com/w3images/underwater.jpg" loading="lazy" alt="The Catcher in the Rye cover image">
+
+
+	  
+
+	  
+	  
+	  
+</body>
+</html>

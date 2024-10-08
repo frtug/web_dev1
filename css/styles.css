@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    left:0;
+    top:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* inline css  > external id class tag */
+
+
+h1{
+    background:green !important;
+}
+#hi{
+    background: blue;
+}
+.hc{
+    background: red;
+}
+h3,h4{
+    color: blue;
+}
+#hi,#hl{
+
+}
+.hi,.hl{
+    
+}
+
+p{
+    margin:10px;
+}
+/* div#di {
+
+}
+div#di p{
+    
+}
+div.di > p{
+
+}
+ */
+
+
+
+
+
+
+section.di > p{
+
+    background-color: rgb(163, 163, 52);
+}
+

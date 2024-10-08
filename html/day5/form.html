@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleSubmit(e){
+            e.preventDefault()
+            console.log("I cliicked a submit button")
+            const formData = new FormData(e.target)
+            console.log(formData.entries())
+
+            for (let [key, value] of formData.entries()) {
+                console.log(`${key}: ${value}`);
+            }
+        }
+        // function handleInput(value){
+        //     console.log(value)
+        // }
+    </script>
+    <style>
+        input{
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <form  onSubmit=handleSubmit(event)>
+        <fieldset>
+            <legend>Personal information</legend>
+            <label for="firstname">
+                First Name
+            </label>
+            <input required type="text" id="firstname" name="firstname"   placeholder="Enter Your first Name"/>
+            <br/>
+            <label for="lastname">
+                Last Name 
+            </label>
+            <input required type="text" id="lastname" name="lastname" placeholder="Enter Your ast Name"/>
+            <br/> 
+            <button type="submit" >Submit</button>
+            <!-- day 5.5  -->
+             <input type="file" />
+             <input type="date"/>
+    <!-- checkboxes -->
+     
+             <label for="hobbies">
+                hobbies
+            </label>
+            <BR/>
+        </fieldset>
+     
+        <fieldset>
+            <legend> Userhandle info</legend>
+            <label for="playing"> Playing</label>
+            <input type="checkbox" id="playing" name="hobbies" value=""/>
+
+            <label for="music"> Music</label>
+            <input type="checkbox" id="music" name="hobbies" />
+
+            <label for="cooking">Cooking</label>
+            <input type="checkbox" id="cooking" name="hobbies" />
+
+            <label for="trading">Trading</label>
+            <input type="checkbox" id="trading" name="hobbies" />
+            
+            <label for="points">Points (between 0 and 10):</label>
+            
+            <input step="2" type="range" id="points" name="points" min="0" max="10" 
+                    value=2 onInput="this.form.point_number.value = this.value">
+            <input type="number" value="0" id="point_id" name="point_number" 
+                    onInput="this.form.points.value = this.value"/>
+
+
+            <button type="reset" >Reset</button>
+            <textarea rows="10" cols="10" placeholder="Enter your paragraph"></textarea>
+            
+            <!-- Select and option tag -->
+            <label for="cars" > Choose Your college</label>
+            <select id="cars" name="cars" size="1" required>
+                <option  value="none">None</option>    
+                <option  value="christ university">Christ University</option>    
+                <option  value="SVCE university">SVCE University</option>    
+                <option value="JNTU university">JNTU University</option>    
+                <option value="JNTU university">JNTU University</option>    
+            </select>
+        </fieldset>
+            
+
+
+    </form>
+</body>
+</html>
