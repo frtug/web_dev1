@@ -1,5 +1,4 @@
-
-.container{
+/* .container{
     background-color: yellowgreen;
     width:98%;
     height:100px;
@@ -12,4 +11,34 @@
 }
 .right{
     float:right;
+}
+.after_float{
+    clear:left;
+}
+div{
+    background-color: rgb(201, 45, 45);
+    border: 2px solid blue;
+    color:aliceblue;
+}
+p{
+    background-color: inse;
+    border:inherit;
+} */
+div{
+    border: 2px solid green;
+    color:violet;
+    /* background-color: yellow; */
+}
+h1{
+    /* color:rgb(0, 0, 0); */
+    border-color: inherit;
+    border-width: 30px;
+    border-style:solid;
+    /* border-width: 10px; */
+    transition:border-color 1.5s linear 0.2s, border-width 1.5s linear 0.2s;
+}
+h1:hover{
+    border-color: blue;
+    border-width: 60px;
+
 }
