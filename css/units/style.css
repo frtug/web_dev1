@@ -1,0 +1,105 @@
+/* var a = "siva"
+var aa = "adarash" */
+:root{
+    --container-width: 50%;
+    /* --name : 30% */
+    --title-text:40px;
+    --para-text: 20px;
+    --padding-para:10px;
+    --padding-button:4px;
+    --margin-title:10px;
+    --margin-button:5px;
+
+    --card-bg: rgb(255, 42, 0);
+    --button-bg: rgb(28, 235, 28);
+    --button-submit: green;
+    --para-bg: #028dff;
+
+    --siva-color:black;
+    ---color:rgb(195, 0, 0);
+    --card-color:#f7b0b0;
+}
+
+h1{
+    font-size: var(--title-text);
+}
+html{
+    background-color: aliceblue;
+    font-size: var(-para-text);
+}
+*{
+    margin:0;
+    padding:0;
+}
+body{ 
+    font-size: var(--text-size);
+    /* width:50%; */
+    /* background-color: red; */
+    /* height:400px; */
+    height:100vh; 
+    width: 100vw;
+}
+
+.contain{
+    width:100%;
+    background-color: aquamarine;
+    height:calc(50% - 18.4px);
+
+}
+.rain{
+    width: var(--container-width);
+    background-color: var(--para-bg);
+    height:calc(50% - 18.4px);
+    font-size: var(--text-size);
+
+
+
+}
+
+.err{
+    width:var(--container-width);
+    background-color: var(--para-bg);
+    /* height:calc(100% - 18.4px); */
+    /* font-size: 2em;  */
+    /* height: 2em; */
+    /* checking for closest parent  */
+    /* 1* 16px  */
+    /* font-size: 2rem;
+    height: 3rem; */
+    /* looking for document root element */
+    font-size: var(--text-size);
+/* 
+    vmin = min(vh,vw)
+    vmax = max(vh,vw) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html{
+    background-color: aliceblue;
+}
+body{
+    width:50%;
+    background-color: aqua;
+}
+div{
+    width:50%;
+    background-color: blueviolet;
+} */
