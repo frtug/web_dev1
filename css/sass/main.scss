@@ -1,0 +1,63 @@
+@use './second';
+
+  nav {
+     ul{
+        li{
+            text-decoration: underline;
+            color:rgb(242, 0, 255);
+            a{
+                color:rgb(28, 184, 62);
+                text-decoration: none;
+            }
+        } 
+     }
+  }
+
+@mixin customDiv($bgColor:green,$col:white){
+    background-color: $bgColor;
+    color:$col;
+    height:200px;
+    width:400px;
+    border:2px solid blue;
+}
+div{
+    @include customDiv;
+    margin-bottom:20px;
+
+}
+main{
+    @include customDiv($bgColor:rgb(192, 45, 4),$col:yellow)
+}
+section{
+    @include customDiv($bgColor:rgb(255, 0, 195 ))
+}
+
+
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+    background-color: yellow;
+
+  }
+  
+  // This CSS won't print because %equal-heights is never extended.
+  %equal-heights {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .message {
+    @extend %message-shared;
+    
+
+  }
+  .message {
+    width: 600px;
+
+  }
+  
+
+
+
+

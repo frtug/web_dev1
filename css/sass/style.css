@@ -1,0 +1,21 @@
+
+/* 
+scss  -> .scss -> css like syntax 
+
+sass  -> .sass -> indent and remving the removing the semicolons remive NOT  {} NOT ; */
+
+/* .scss  */
+/* div h1{
+
+}
+div h2 { */
+
+
+
+/* sass */
+/* div
+    h1
+        color:blue;
+
+    h2 
+        color:red */

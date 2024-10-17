@@ -1,0 +1,52 @@
+h1 {
+  color: pink;
+}
+
+li {
+  color: green;
+}
+
+nav ul li {
+  text-decoration: underline;
+  color: rgb(242, 0, 255);
+}
+nav ul li a {
+  color: rgb(28, 184, 62);
+  text-decoration: none;
+}
+
+div {
+  background-color: green;
+  color: white;
+  height: 200px;
+  width: 400px;
+  border: 2px solid blue;
+  margin-bottom: 20px;
+}
+
+main {
+  background-color: rgb(192, 45, 4);
+  color: yellow;
+  height: 200px;
+  width: 400px;
+  border: 2px solid blue;
+}
+
+section {
+  background-color: rgb(255, 0, 195);
+  color: white;
+  height: 200px;
+  width: 400px;
+  border: 2px solid blue;
+}
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  background-color: yellow;
+}
+
+.message {
+  width: 600px;
+}/*# sourceMappingURL=main.css.map */
