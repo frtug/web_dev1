@@ -4,42 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css"/>
+    <!-- <link rel="stylesheet" href="./> -->
+<style>
+    .popup{
+        background-color: rgba(206, 52, 206, 1);
+        display: none;
+        /* visibility: hidden; */
+        /* opacity: 0; */
+
+    }
+    .appear_pop{
+        display:block;
+        /* visibility: visible; */
+        /* opacity: 1; */
+        color:white;
+        border:"2px solid black";
+        padding:10px;
+    }
+
+</style>
+
+    <script>
+        function createModal(){
+            console.log("created")
+            // var cm =  document.getElementById('pop'); 
+
+
+            var cm =  document.getElementsByClassName('popup')[0];
+            console.log(cm)
+            // TODO: Make a class way also....
+
+
+            cm.classList.add("appear_pop")
+            // cm.style.display = "block";
+            // cm.style.color = "white";
+            // cm.style.border = "2px solid black";
+            // cm.style.padding = "10px";
+
+        }
+        function closeModal(){
+            var cm =  document.getElementById('pop');
+            cm.classList.remove("appear_pop")
+
+        }
+        function clickButton(){
+            console.log("clicked button in the modal")
+        }
+    </script>
 </head>
 <body>
-    <h1 id="hi" class="hc" style="background:white">Learning CSS NOW</h1>
-    <h3 >Learning HTMl NOW</h4>
-    <h4 >Learning js NOW</h4>
 
-    <div class="di">
-        <p>THis is me</p>
-        <p>THis is You</p>
-        <p>THis is me</p>
-        <p>THis is You</p>
-    
+    <button onclick="createModal()">
+        Open Modal
+    </button>
+    <button onclick="closeModal()">
+        close Modal
+    </button>
+
+    <div class="popup" id="pop">
+       <img width="300" height="auto" alt="img" src="https://www.w3schools.com/css/paris.jpg"/> 
+       <h1>
+        This is modal window
+       </h1>
+       <button onClick="clickButton()">
+        Click me 
+       </button>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, fugiat omnis alias nobis similique consequatur nostrum laudantium velit aut qui dolorem aliquam? Totam libero aliquid quae temporibus distinctio porro obcaecati!</p>
     </div>
-    <section class="di">
-        <div>
-            <p>THis is me</p>
-            <p>THis is You</p>
-            <p>THis is me</p>
-            <p>THis is You</p>
-        </div>
-        <div>
-            <p>THis is me</p>
-            <p>THis is You</p>
-            <p>THis is me</p>
-            <p>THis is You</p>   
-        </div>
-        <p>THis is inside sec</p>
-        <p>THis inside You</p>
-        <p>THis inside me</p>
-        <p>THis inside You</p>
-      
-    
-    </section>
-    <p>THis is Outside</p>
-
-   
+    <div>
+        I am the last child
+    </div>
 </body>
 </html>

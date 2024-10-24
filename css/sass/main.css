@@ -1,11 +1,10 @@
 h1 {
-  color: pink;
+  color: rgb(246, 13, 223);
 }
 
 li {
   color: green;
 }
-
 nav ul li {
   text-decoration: underline;
   color: rgb(242, 0, 255);
@@ -40,13 +39,4 @@ section {
   border: 2px solid blue;
 }
 
-.message {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-  background-color: yellow;
-}
-
-.message {
-  width: 600px;
-}/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */

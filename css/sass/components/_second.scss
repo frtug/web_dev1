@@ -1,0 +1,16 @@
+$_textColor : rgb(246, 13, 223);
+$bgColor : rgb(184, 226, 235);
+
+h1{
+    color:$_textColor;
+}
+li{
+    color:green;
+
+    &:hover{
+     
+    }
+    &:active{
+        
+    }
+}

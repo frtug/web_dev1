@@ -1,4 +1,4 @@
-@use './second';
+@use './components/second' as sin;
 
   nav {
      ul{
@@ -20,6 +20,8 @@
     width:400px;
     border:2px solid blue;
 }
+    // functions 
+ 
 div{
     @include customDiv;
     margin-bottom:20px;
@@ -29,7 +31,8 @@ main{
     @include customDiv($bgColor:rgb(192, 45, 4),$col:yellow)
 }
 section{
-    @include customDiv($bgColor:rgb(255, 0, 195 ))
+    @include customDiv($bgColor:rgb(255, 0, 195 ));
+
 }
 
 
@@ -40,22 +43,20 @@ section{
     background-color: yellow;
 
   }
-  
-  // This CSS won't print because %equal-heights is never extended.
-  %equal-heights {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .message {
-    @extend %message-shared;
-    
 
+  @function customrgba($r,$g,$b,$a:1){
+    @return rgba($r,$g,$b,$a);
   }
-  .message {
-    width: 600px;
+//   .message {
+//     // @extend %message-shared;
+//     color:  sin.$bgColor;
+//     background-color: customrgba(255,0,0,0.63);
+//   }
+ 
 
-  }
+
+
+
   
 
 
