@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello
+
+    interpreter / 
+    V8
+    (JIT Compiler)
+
+    Parser - > AST (tree) -> interpreter -> bytecode
+                            profiler -> compiler -> bytecode but  optimized code 
+
+    
+
+
+    <script>
+
+        var healthCheck = "i am good " 
+        var num = 234 
+        var bool = false 
+
+        var nothing = null
+        var notAvailable = undefined;
+        
+        // declared or instantatied 
+        var a;
+        let hello = "hello"
+
+    // let hello = "i am saying hello";
+        hello = "i am saying hello";
+
+        // hoisting
+
+        const h = "I am here "
+        // h = "hello";
+
+        console.log(h)
+        
+        
+        // hoisting
+
+        console.log(fan)
+
+        var fan = "V-Guard";
+
+        console.log(fan)
+
+        // let var, const 
+
+        const party = (t)=>{
+            console.log(z);
+            console.log(t);
+        }
+        // scope
+        let z = "I am z"
+        function enjoy(){
+            let z = "hello"
+            party("siva");
+
+        }
+        enjoy()
+        console.log(z)
+
+
+        // function fun(a,b){
+        //     return a+b;
+        // }
+        // function jsEngine(code){
+        //    return  code.split(" ");
+        // }
+        // console.log(jsEngine("var a = 'hello' "));   
+    
+
+        // for(let i=0;i<1000;i++){
+        //     console.log(3);
+        // }
+
+    </script>
+    
+</body>
+</html>
