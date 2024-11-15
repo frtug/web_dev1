@@ -239,24 +239,57 @@ let students = ["Adarsha","siva","teja","pooja"];
 
 // let st3 = "Teja"
 
-console.log(students[0])
-console.log(students[1])
+// console.log(students[0])
+// console.log(students[1])
 
-let n = students.length;
+// let n = students.length;
 
-console.log(students[n-1])
+// console.log(students[n-1])
 
-students[n] = "abhi"
+// students[n] = "abhi"
 
-console.log(students.push("Rohan")) // adding at last
+// console.log(students.push("Rohan")) // adding at last
 
-students.pop() // adding at last
+// students.shift() // adding at last
 
-n = students.length;
+// // shift and unshift()
 
-for(let i=0;i<=n-1;i++){
-    console.log(students[i])
+// n = students.length;
+
+// for(let i=0;i<=n-1;i++){
+//     console.log(students[i])
+// }
+
+let row = 3;
+let col=2;
+
+// let stu_2d = Array.from({length:row},()=>Array(col).fill(null));
+let stu_2d = [];
+
+for(let i=0;i<row;i++){
+    stu_2d[i] = [];
+    for(let j=0;j<col;j++){
+        stu_2d[i][j] = null;
+    }
 }
+
+// stu_2d[0] = [];
+// stu_2d[1] = [];
+
+// stu_2d[0][0] = 1 
+// stu_2d[1][0] = 1 
+
+
+
+// console.log(stu_2d[0])
+
+for(let i=0;i<stu_2d.length;i++){
+    // console.log(stu_2d[i])
+    for(let j=0;j<stu_2d[i].length;j++){
+        console.log(stu_2d[i][j])
+    }
+}
+
 
 
 
