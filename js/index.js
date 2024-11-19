@@ -228,12 +228,12 @@
 //     }
 
 
-let arr = [];
-console.log(arr)
+// let arr = [];
+// console.log(arr)
 
 
 
-let students = ["Adarsha","siva","teja","pooja"];
+// let students = ["Adarsha","siva","teja","pooja"];
 // let st1 = "Adarsha"
 // let st2 = "Siva"
 
@@ -260,18 +260,18 @@ let students = ["Adarsha","siva","teja","pooja"];
 //     console.log(students[i])
 // }
 
-let row = 3;
-let col=2;
+// let row = 3;
+// let col=2;
 
-// let stu_2d = Array.from({length:row},()=>Array(col).fill(null));
-let stu_2d = [];
+// // let stu_2d = Array.from({length:row},()=>Array(col).fill(null));
+// let stu_2d = [];
 
-for(let i=0;i<row;i++){
-    stu_2d[i] = [];
-    for(let j=0;j<col;j++){
-        stu_2d[i][j] = null;
-    }
-}
+// for(let i=0;i<row;i++){
+//     stu_2d[i] = [];
+//     for(let j=0;j<col;j++){
+//         stu_2d[i][j] = null;
+//     }
+// }
 
 // stu_2d[0] = [];
 // stu_2d[1] = [];
@@ -283,12 +283,283 @@ for(let i=0;i<row;i++){
 
 // console.log(stu_2d[0])
 
-for(let i=0;i<stu_2d.length;i++){
-    // console.log(stu_2d[i])
-    for(let j=0;j<stu_2d[i].length;j++){
-        console.log(stu_2d[i][j])
+// for(let i=0;i<stu_2d.length;i++){
+//     // console.log(stu_2d[i])
+//     for(let j=0;j<stu_2d[i].length;j++){
+//         console.log(stu_2d[i][j],)
+//     }
+// }
+
+// for(let i=5;i>0;i--){
+//     let row = "";
+//     for(let j=0;j<i;j++){
+//         row = row +"* ";
+//     }
+//     console.log(row)
+// }
+
+// let siva = {
+//     name:"Siva",
+//     age:23,
+//     dob:"07/08/2003",
+//     isMature:true
+    
+// }
+// // console.log(siva.name)
+// // console.log(siva.age)
+// // console.log(siva['dob'])
+
+// siva.gender = "Male"
+// siva["education"] = "Btech"
+
+
+// delete siva['education']
+// // console.log(siva['gender'])
+
+// for(key in siva){
+//     console.log(key,siva[key])
+// }
+
+// --------------------------------------18 Nov 
+let students = [
+    {
+        name:"Siva",
+        age:23,
+        dob:"07/08/2003",
+        isMature:true,
+        marks:[12,34,3],
+        friends:{
+            friend1 : "Adarsha",
+            friend2: "Teja" 
+        } 
+    },
+    {
+        name:"Adarsha",
+        age:23,
+        dob:"06/08/2002",
+        isMature:true,
+        marks:[33,11,15] , 
+        friends:{
+            friend1 : "Siva",
+            friend2: "Teja" 
+        }    
     }
+]
+
+// let arr = students[0].marks;
+// let sum = 0;
+// for(let i=0;i<arr.length;i++){
+//     sum += arr[i];   
+//     // sum = sum + arr[i];
+// }
+
+// for(let i=0;i<students.length;i++){
+//     let marks_arr = students[i].marks;
+//     let sum = 0;
+//     for(let j=0;j<marks_arr.length;j++){
+//         sum += marks_arr[j];   
+//     }
+//     console.log("Average =",sum/marks_arr.length)
+// }
+
+// students.forEach((student) => {
+//     let arr = student.marks;
+//     let sum =0;
+//     arr.forEach(function(mark){
+//         sum += mark;
+//     })
+//     console.log(sum/arr.length)
+// });
+
+// students.forEach((student) => {
+//     for(property in student){
+//         // console.log(typeof(student[property]),typeof(property))
+//         if( typeof(student[property]) != "object" ){
+//             console.log(property,student[property])
+//         }
+//         else {
+//             // console.log(property,student[property])
+//             console.log("object detected")
+//             let v = student[property];
+//             let sum = 0;
+//             let friend_cat = ""
+//             // if(student[property] instanceof Array){
+//             if(Array.isArray(student[property])){
+//                 v.forEach((mark)=>{
+//                     sum += mark
+//                 })
+//             }
+//             else{
+//                 let friends = student[property];
+//                 for(friend in friends){
+//                     friend_cat += friends[friend]+",";
+//                 }
+//             }
+
+            
+//             console.log(sum)
+//             console.log(friend_cat)
+
+//         }
+//     }
+
+
+
+        // console.log(property,student[property])
+    //    if(Array.isArray(student[property])){
+
+    //     // if(student[property] instanceof Array){
+    //         console.log(student[property])
+    //     }
+    //     else if(typeof(student[property]) === 'object'){
+    //         console.log("obj",student[property] )
+    //     }
+    
+
+    // let friend_ = ""
+    // for(friend in obj){
+    //     // console.log(friend, obj[friend])
+    //     friend_ +=   obj[friend]+",";
+    // }
+    // console.log(friend_)
+// });
+
+
+// console.log(students[0].marks)
+// console.log(students[1].marks)
+
+
+// console.log(typeof(students[0].marks))
+
+// let fun = function(a,b){
+//     return a+b;
+// }
+// console.log(typeof(fun))
+
+
+// console.log(1 == "1") //true
+// console.log(1 === "1") // false
+
+// console.log(true == true) // true
+// console.log(true === "true") //false
+// console.log(true == 0) // true
+
+// console.log(undefined == undefined) // true
+// console.log(undefined === "undefined") //false
+// console.log(undefined == null) // false
+// console.log(undefined === null) // f
+
+
+// var togo = function (a,b){
+//     let secret = "I am not a cat "+(a+b-1)
+//     return function a(p){
+//         return p+ secret
+//     }
+// }
+// let t = togo(2,3)
+// console.log(t("hi "))
+// console.log(t("hi "))
+// console.log(t("hi "))
+
+// const add = function (a,b) {return a+b;}
+
+// const sub = function (a,b) {return a-b;}
+// const multi = function (a,b) {return a*b;}
+
+// const operations = [add,sub,multi];
+
+// operations.forEach((op)=>{
+//     console.log(op(10,5))
+// })
+//     *
+//    ***
+//   *****
+//  *******
+//  *********
+
+// let n = 5;
+// for(let i=0;i<n;i++){
+//     let row = ""
+//     for(let j=n;j>i+1;j--){
+//         row += ' ';
+//     }
+//     // console.log(row)
+//     for(let k=0;k<2*(i+1)-1;k++){
+//         row += "*"
+//     }
+//     console.log(row)
+
+//     // next half
+// }
+
+// var student1 = {
+//     name:"aa",
+//     age: 22
+// }
+// var student2 = {
+//     name:"ss",
+//     age: 21
+// }
+
+// var createStudent = function(name,age){
+//     var student = {
+//         name:name,
+//         age:age,
+//         birthday:function(){ this.age =this.age+1}
+//         // TODO-Student :: age instead of this.age and see what happens  
+//     }
+//     return student
+// }
+// var student1 = createStudent("darling",22)
+// console.log(student1)
+// student1.birthday()
+// console.log(student1)
+
+// var student2 = createStudent("babe",33)
+
+// // console.log(student2)
+
+// var Student = function(name,age){
+//     this.name =name
+//     this.age = age
+//     this.birthday = function(){
+//         this.age++;
+//     }
+// }
+// let st1 = new Student("Siva",22)
+// console.log(st1)
+// st1.birthday()
+// console.log(st1)
+
+// pallendrome
+
+
+// siva
+// avia  
+// let s = "siva" // 
+
+// if(s.split("").reverse().join("") === s)
+//     console.log("pallendrome")
+// else 
+// console.log("not a pallendrome")
+
+
+let ss = "siis"
+
+let i=0;
+let j=ss.length-1;
+let isPallen = true
+while(i < j){
+    if(ss[i] !== ss[j]) {
+        isPallen = false;
+        break;
+    }
+    i++;
+    j--;
 }
+if(isPallen)     console.log("pallendrome")
+else console.log("not a pallendrome")
+
 
 
 
