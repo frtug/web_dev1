@@ -18,10 +18,29 @@
 
 
      <script> 
-           var el = document.querySelector('h1')
-           var ee = "Siva"
-           el.innerHTML = `I am here updating innerhtml from js<span class="fun">Bye ${ee}</span>`
-        //    console.log(el.innerHTML)
+     var a = document.querySelector('h1').textContent;  
+  var d = document.querySelector('h1')
+  var ne="";
+  var colors = ["red","blue","green","yellow","pink","lightblue"]
+  for(let i=0;i<a.length;i++){
+      if(a[i] != " ")
+          ne = ne+`<span>${a[i]}</span>`
+      else ne = ne+" "
+  }
+  console.log(ne)
+  d.innerHTML = ne;
+  
+  var all = document.querySelectorAll("span")
+  console.log(all)
+  for(let i=0;i<all.length;i++){
+      let index = i;
+      if(i >= colors.length ) index = i % colors.length 
+      all[i].style.color = colors[index];
+  }
+        //    var el = document.querySelector('h1')
+        //    var ee = "Siva"
+        //    el.innerHTML = `I am here updating innerhtml from js<span class="fun">Bye ${ee}</span>`
+        // //    console.log(el.innerHTML)
         //    console.log(el.outerHTML)
         //    console.log(el.textContent)
         //    console.log(el.id)

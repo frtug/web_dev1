@@ -544,23 +544,64 @@ let students = [
 // console.log("not a pallendrome")
 
 
-let ss = "siis"
+// let ss = "siis"
 
-let i=0;
-let j=ss.length-1;
-let isPallen = true
-while(i < j){
-    if(ss[i] !== ss[j]) {
-        isPallen = false;
-        break;
-    }
-    i++;
-    j--;
-}
-if(isPallen)     console.log("pallendrome")
-else console.log("not a pallendrome")
+// let i=0;
+// let j=ss.length-1;
+// let isPallen = true
+// while(i < j){
+//     if(ss[i] !== ss[j]) {
+//         isPallen = false;
+//         break;
+//     }
+//     i++;
+//     j--;
+// }
+
+// function isPallendrome(str){
+//     for(let i=0,j=str.length-1;i<j;i++,j--){
+//         if(str[i] !== str[j]) return false;
+
+//     }
+//     return true;
+// }
+// if(isPallendrome("saat"))  console.log("pallendrome")
+// else console.log("not a pallendrome")
+
+// let c = "man"
+// let m = c.length;
+// let rev='';
+// console.log(m)
+// for(let p=m-1;p>=0;p--){
+// //   console.log(c[p]) 
+//     rev = rev + c[p];
+// }
+// console.log(rev)
+
+// if(rev===c) console.log(c,"is a palindrome")
+// else console.log(c,"is not a palindrome")
+// function fact(n){
+//     let fa = 1 ;
+//     for(let i=n;i>0;i--){
+//         console.log(i);
+//         fa = fa*i;
+//     }
+//     return fa
+// }
+
+// console.log(fact(5))
+
+// function arr_fact(arr){
+//     let a = [];
+//     //  write your code here which will calc. factorial of a number and save it in array
+//     return a
+// }
+// let arr = [1,2,3,4,5,5,6,6,3,5,6,2,5,6,36,63] 
+// console.log(arr_fact(arr))
+
+// Q2
+// write a pallendrome function which will get an array and your are going
+// to return true or false in an array in an same order of the string 
 
 
-
-
-
+console.log(Math.round(Math.random()*255))
