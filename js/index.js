@@ -603,5 +603,18 @@ let students = [
 // write a pallendrome function which will get an array and your are going
 // to return true or false in an array in an same order of the string 
 
+// q#
 
 console.log(Math.round(Math.random()*255))
+
+// function which will return 100 random values in an Array. and later pass that array to a sum function which will calculate sum of that array... 
+
+function isPrime(n){
+    for(let i=2;i<=Math.sqrt(n);i++){
+        if(n % i == 0) return false; 
+    }
+    return true;
+
+}
+console.log(isPrime(11))
+// LCM (2,10)
