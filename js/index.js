@@ -605,16 +605,60 @@ let students = [
 
 // q#
 
-console.log(Math.round(Math.random()*255))
+// console.log(Math.round(Math.random()*255))
 
 // function which will return 100 random values in an Array. and later pass that array to a sum function which will calculate sum of that array... 
 
-function isPrime(n){
-    for(let i=2;i<=Math.sqrt(n);i++){
-        if(n % i == 0) return false; 
-    }
-    return true;
+// function  will check the prime number from a given range or maybe first 100 naturals numbers, and give in list in array.
 
-}
-console.log(isPrime(11))
+// 1 to 100
+
+
+
+
+
+
+
+
+// function isPrime(n){
+//     for(let i=2;i<=Math.sqrt(n);i++){
+//         if(n % i == 0) return false; 
+//     }
+//     return true;
+
+// }
+// console.log(isPrime(11))
+
 // LCM (2,10)
+
+// function sum(a,b){
+//     console.log(a+b)
+// }
+// console.log(sum(2,4))
+
+// let a = 1;
+
+// console.log(a)
+// console.log(console.log(a));
+
+// if(console.log(a)){
+//     console.log("hello")
+// }
+// else console.log("Bye")
+
+
+let a = 6;
+switch(a){
+    case 0:
+    case 1:
+    console.log("zero one",a) 
+    break;
+    case 2:
+    console.log("two",a) 
+    break;
+    case 3:
+    console.log("three",a) 
+    break;
+    default:
+        console.log("all values after 3",a) 
+        }
