@@ -647,18 +647,41 @@ let students = [
 // else console.log("Bye")
 
 
-let a = 6;
-switch(a){
-    case 0:
-    case 1:
-    console.log("zero one",a) 
-    break;
-    case 2:
-    console.log("two",a) 
-    break;
-    case 3:
-    console.log("three",a) 
-    break;
-    default:
-        console.log("all values after 3",a) 
-        }
+// let a = 6;
+// switch(a){
+//     case 0:
+//     case 1:
+//     console.log("zero one",a) 
+//     break;
+//     case 2:
+//     console.log("two",a) 
+//     break;
+//     case 3:
+//     console.log("three",a) 
+//     break;
+//     default:
+//         console.log("all values after 3",a) 
+//        
+// let n = 5
+// for(let i=0;i<n;i++){
+//     let row = "";
+//     for(let j=0;j<n-i-1;j++){
+//         row += " "
+//     }
+//     row += '*';
+// // --------------------
+//     if(i != 0){
+//         // spaces in middle with 2n-1 function 
+//         for(let j=0;j<2*i -1;j++){
+//             row += " "
+//         }
+//         row += "*"
+//     }
+
+
+//     console.log(row)
+// }
+
+// cal
+
+
