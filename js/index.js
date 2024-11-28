@@ -661,18 +661,18 @@ let students = [
 //     break;
 //     default:
 //         console.log("all values after 3",a) 
-//        
+       
 // let n = 5
-// for(let i=0;i<n;i++){
+// for(let i=1;i<=n;i++){
 //     let row = "";
-//     for(let j=0;j<n-i-1;j++){
+//     for(let j=0;j<n-i;j++){
 //         row += " "
 //     }
 //     row += '*';
 // // --------------------
-//     if(i != 0){
+//     if(i != 1){
 //         // spaces in middle with 2n-1 function 
-//         for(let j=0;j<2*i -1;j++){
+//         for(let j=0;j<2*(i-1) -1;j++){
 //             row += " "
 //         }
 //         row += "*"
@@ -681,7 +681,38 @@ let students = [
 
 //     console.log(row)
 // }
+// let a = "Hello"
+// (a.length > 6) ? console.log("helo") : console.log("bye")
 
 // cal
+
+// 3 conditions 
+
+// const modes = ["ready","onMove","reached"];
+
+// function randomMode(n){
+//     return Math.round(Math.random()*(n-1));
+// }
+
+// switch(randomMode(mode.length)):
+
+
+// -----------
+//           /
+//          /
+
+const marks = {
+    "A+": 95, 
+    A : 90,
+    "B+": 85, 
+    B : 80,
+    "c+": 75, 
+    c : 70,
+    d : "0"
+}
+if(!true){
+    console.log("Pooja")
+}
+
 
 
