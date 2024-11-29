@@ -321,30 +321,30 @@
 // }
 
 // --------------------------------------18 Nov 
-let students = [
-    {
-        name:"Siva",
-        age:23,
-        dob:"07/08/2003",
-        isMature:true,
-        marks:[12,34,3],
-        friends:{
-            friend1 : "Adarsha",
-            friend2: "Teja" 
-        } 
-    },
-    {
-        name:"Adarsha",
-        age:23,
-        dob:"06/08/2002",
-        isMature:true,
-        marks:[33,11,15] , 
-        friends:{
-            friend1 : "Siva",
-            friend2: "Teja" 
-        }    
-    }
-]
+// let students = [
+//     {
+//         name:"Siva",
+//         age:23,
+//         dob:"07/08/2003",
+//         isMature:true,
+//         marks:[12,34,3],
+//         friends:{
+//             friend1 : "Adarsha",
+//             friend2: "Teja" 
+//         } 
+//     },
+//     {
+//         name:"Adarsha",
+//         age:23,
+//         dob:"06/08/2002",
+//         isMature:true,
+//         marks:[33,11,15] , 
+//         friends:{
+//             friend1 : "Siva",
+//             friend2: "Teja" 
+//         }    
+//     }
+// ]
 
 // let arr = students[0].marks;
 // let sum = 0;
@@ -700,19 +700,77 @@ let students = [
 // -----------
 //           /
 //          /
+// const subjects = {
+//     "tel":"A+",
+//      "hin":"A",
+//      "kan":"A+",
 
-const marks = {
-    "A+": 95, 
-    A : 90,
-    "B+": 85, 
-    B : 80,
-    "c+": 75, 
-    c : 70,
-    d : "0"
+// }
+
+// const marks = {
+//     "A+": 95, 
+//     A : 90,
+//     "B+": 85, 
+//     B : 80,
+//     "c+": 75, 
+//     c : 70,
+//     d : 0
+// }
+// function findMarks(lan){
+//     switch(lan){
+//         case "kan":
+//             console.log("language is Kannada and marks", marks[subjects[lan]]  )
+//             return marks[subjects[lan]];
+//         case "tel":
+//             console.log("language is Telugu and marks", marks[subjects[lan]]  )
+//             return marks[subjects[lan]];
+          
+//         case "hin":
+//             console.log("language is Hindi and marks", marks[subjects[lan]]  )
+//             return marks[subjects[lan]];
+        
+//         default:
+//             console.log("language is not available", subjects[lan] )
+
+//     }
+    
+
+// }
+// var lan = ["kan","tel","tel","kan","hin","en"]
+// lan.forEach((l)=>{
+//     console.log(findMarks(l))
+// })
+let i = 6; // 00000000 00000000 00000000 00000110  
+let j = 2; //0010
+
+console.log(i & j) //0010 ->2 
+console.log(i | j) //0110 -> 6
+console.log(i ^ j) // 0100 -> 4 -> 00001 0000
+
+console.log(~i) // 1001 -> 9 -> 11111111 11111111 11111111 11111001 
+
+// left shift
+console.log(i << 2) //0110 -> 11000 
+console.log(i << 1) //0110 -> 1100 
+
+//right shift
+console.log(i >> 2) //0110 -> 0001  // 1
+console.log(i >> 1) //0110 -> 0011  3
+
+
+
+let str = "hello World"
+
+let obj = {}
+
+for(let c of str){
+    if(obj[c]){
+        obj[c]++;
+    }
+    else {
+        obj[c] = 1
+    }
 }
-if(!true){
-    console.log("Pooja")
-}
+console.log(obj)
 
-
-
+console.log("\\")
