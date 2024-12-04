@@ -740,37 +740,199 @@
 // lan.forEach((l)=>{
 //     console.log(findMarks(l))
 // })
-let i = 6; // 00000000 00000000 00000000 00000110  
-let j = 2; //0010
+// let i = 6; // 0110   -> 2^1*1+2^2*1
+// let j = 2; //0010
 
-console.log(i & j) //0010 ->2 
-console.log(i | j) //0110 -> 6
-console.log(i ^ j) // 0100 -> 4 -> 00001 0000
+// console.log(i & j) //0010 ->2 
+// console.log(i | j) //0110 -> 6
+// console.log(i ^ j) // 0100 -> 4 -> 00001 0000
 
-console.log(~i) // 1001 -> 9 -> 11111111 11111111 11111111 11111001 
-
-// left shift
-console.log(i << 2) //0110 -> 11000 
-console.log(i << 1) //0110 -> 1100 
-
-//right shift
-console.log(i >> 2) //0110 -> 0001  // 1
-console.log(i >> 1) //0110 -> 0011  3
+// console.log(~i) // 1001 -> 9 -> 11111111 11111111 11111111 111111001 -> second's complemement rule 
 
 
+// // 00000000 00000000 00000000 00000110 + 00000000 00000000 00000000 00000001 -> 00000000 00000000 00000000 00000111
 
-let str = "hello World"
+// // // left shift
+// console.log(i << 3) //0110 -> 01100 -> 11000 ->110000
+// // console.log(i << 1) //0110 -> 1100 
 
-let obj = {}
+// // //right shift
+// console.log(i >> 2) //0110 ->0011 -> 0001  // 1
+// // console.log(i >> 1) //0110 -> 0011  3
 
-for(let c of str){
-    if(obj[c]){
-        obj[c]++;
+
+
+// let str = "hello world"
+
+// let obj = {}
+
+// for(let c of str){
+//     if(obj[c]){
+//         obj[c]++;
+//     }
+//     else {
+//         obj[c] = 1
+//     }
+// }
+// console.log(obj)
+
+// a to z
+
+// let arr = [];
+// for(let i=0;i<26;i++){
+//     arr[i] = 0;
+// }
+
+
+
+// function test(n){
+//     let charCount=[];
+//     for(let char in n){
+//         // console.log(char)
+//         charCount[str.charCodeAt(char) - 97 ] =(charCount[str.charCodeAt(char) - 97 ] || 0) + 1;
+//     }
+//     return charCount;
+// }
+
+// let arr = [];
+// let str="hello world";
+
+// for(let i=0;i<25;i++){
+//   arr[i] = 0;
+// }
+// let con = 97;
+
+// for(let i=0;i<str.length;i++){
+//   // console.log(str[i])
+//   if(str.charCodeAt(i) != 32)
+//     arr[str.charCodeAt(i)-con]++;
+//   // arr[i] = arr[i]++;
+// }
+// console.log(arr)
+// for(let i=0;i<arr.length;i++){
+//   if(arr[i] != 0){
+//     console.log(String.fromCharCode(i+con),arr[i])
+//   }
+// }
+
+
+// for(let i=0;i<str.length;i++){
+//     console.log(arr[str.charCodeAt(i)-con],str[i])
+  
+// }
+// console.log(arr)
+
+
+
+
+
+// console.log("\\")
+
+// --sorting, increaing and decreasing
+
+// let arr = [3,52,55,252,52,52]
+
+// arr.sort((a,b)=>b-a)
+// console.log(arr)
+
+// 10101 -> 21
+// let str = "10101"
+
+// function binaryTodecimal(bin){
+//     let sum = 0;
+//     let n =str.length;
+//     for(let i=0;i<n;i++){
+//         sum += str[n-i-1]* Math.pow(2,i)  
+//     }
+//     return sum
+// }
+// console.log(binaryTodecimal(str))
+// console.log(parseInt(str,2))
+
+//-------------------------------
+// let deci = 22;
+// function decimalToBinary(d){
+//     let str =""
+    // let count = 0
+//     while(d > 0){
+//         let last = d%2; // if d = 3 , 1
+//         str = last + str;
+//         d = Math.floor(d/2)
+// count++;
+//     }
+//     return str;
+// }   
+// console.log(decimalToBinary(deci))
+
+// binray to decimal
+
+// let bin = 101010 %2  = 0
+
+// get a decimal 42
+// let i = 1
+// console.lo(i)
+// let si = new Error("Siva doe's match");
+// try{
+//     // write any piece of code which will give an error
+//     let i ="sivaa"
+//     if(i !== "siva") throw si;
+//     try{
+//         console.lo("Pint it")
+//     }
+//     catch(err){
+//         console.log("error of console handled",err)
+//     }
+// }
+// catch(err){
+//     console.log("i got an error",err)
+// }
+// finally{
+//     console.log("Handled the error")
+
+// }
+
+
+function reverseNumber(n){
+    let rev = 0;
+    while(n >0){
+        let r = n%10;
+        rev = rev*10 + r;
+        n = Math.floor(n/10);
     }
-    else {
-        obj[c] = 1
-    }
+    return rev
 }
-console.log(obj)
+console.log(reverseNumber(1000232))
 
-console.log("\\")
+
+
+function rec_sum(n){
+    if(n == 0 || n == 1) return n;
+    return n + rec_sum(n-1)
+}
+console.log(rec_sum(10)) 
+
+
+function rec_fac(n){
+    if(n == 0 || n == 1) return 1;
+    return n * rec_fac(n-1)
+}
+console.log(rec_fac(5)) 
+
+// rec_sum(10) = rec_sum(9)+10
+// rec_sum(9) = rec_sum(8)+9
+
+
+function rec_pal(str){
+    if(str.length == 0 || str.length == 1) return true 
+      if(str[0] == str[str.length-1]) {
+        return true && rec_pal(str.substring(1,str.length-1))
+    }
+    else return false
+}
+
+console.log(rec_pal("jijd")) 
+
+
+// binrary to decimal conversion using recursion method 
+
+// decial to binrary recursion 
