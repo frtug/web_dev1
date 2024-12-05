@@ -892,47 +892,116 @@
 // }
 
 
-function reverseNumber(n){
-    let rev = 0;
-    while(n >0){
-        let r = n%10;
-        rev = rev*10 + r;
-        n = Math.floor(n/10);
-    }
-    return rev
-}
-console.log(reverseNumber(1000232))
+// function reverseNumber(n){
+//     let rev = 0;
+//     while(n >0){
+//         let r = n%10;
+//         rev = rev*10 + r;
+//         n = Math.floor(n/10);
+//     }
+//     return rev
+// }
+// console.log(reverseNumber(1000232))
 
 
-
-function rec_sum(n){
-    if(n == 0 || n == 1) return n;
-    return n + rec_sum(n-1)
-}
-console.log(rec_sum(10)) 
-
-
-function rec_fac(n){
-    if(n == 0 || n == 1) return 1;
-    return n * rec_fac(n-1)
-}
-console.log(rec_fac(5)) 
-
-// rec_sum(10) = rec_sum(9)+10
-// rec_sum(9) = rec_sum(8)+9
+// function bToD(n){
+//     let d = 0;
+//     let i=0;
+//     while(n > 0){
+//         let r = n%10;
+//         d += r*Math.pow(2,i);
+//         n = Math.floor(n/10);
+//         i++
+//     }
+//     return rev
+// }
+// console.log(bToD(100100))
 
 
-function rec_pal(str){
-    if(str.length == 0 || str.length == 1) return true 
-      if(str[0] == str[str.length-1]) {
-        return true && rec_pal(str.substring(1,str.length-1))
-    }
-    else return false
-}
+// function rec_sum(n){
+//     if(n == 0 || n == 1) return n;
+//     return n + rec_sum(n-1)
+// }
+// console.log(rec_sum(10)) 
 
-console.log(rec_pal("jijd")) 
+
+// function rec_fac(n){
+//     if(n == 0 || n == 1) return 1;
+//     return n * rec_fac(n-1)
+// }
+// console.log(rec_fac(5)) 
+
+// // rec_sum(10) = rec_sum(9)+10
+// // rec_sum(9) = rec_sum(8)+9
+
+
+// function rec_pal(str){
+//     if(str.length == 0 || str.length == 1) return true 
+//       if(str[0] == str[str.length-1]) {
+//         return true && rec_pal(str.substring(1,str.length-1))
+//     }
+//     else return false
+// }
+
+// console.log(rec_pal("jijd")) 
 
 
 // binrary to decimal conversion using recursion method 
 
 // decial to binrary recursion 
+
+// function rbd(str,i){
+//     if(str.length == 0) {
+//         return 0
+//     }
+//     return str[str.length-1]* Math.pow(2,i) + rbd(str.substring(0,str.length-1),i+1)
+
+
+// }
+// console.log(rbd("1000",0))
+
+// global function 
+// let str = "10111"
+// console.log(str.substring(0,str.length-2))   
+{
+    let i=0
+}
+var i = 0;
+
+function hello(){
+
+    console.log("hello I am here")  
+    function abc(){
+        console.log("I am here abc")
+    } 
+    abc()
+}
+
+const greet =()=>{
+    // function expression 
+}
+hello()
+
+for(var i=0;i<10;i++){
+    setTimeout(()=>{
+        console.log(i)
+    },2000)
+}
+// var i=0;
+// console.log("hello Start",i)
+
+// setTimeout(function(){
+//     console.log("hello I am ",i)
+//     i++
+// },0)
+
+// console.log("hello i am done",i)
+
+// setTimeout(function(){
+//     console.log("hello I am 2 ",i)
+    
+// },1000)
+
+
+
+
