@@ -963,30 +963,31 @@
 // global function 
 // let str = "10111"
 // console.log(str.substring(0,str.length-2))   
-{
-    let i=0
-}
-var i = 0;
+// {
+//     let i=0
+// }
+// var i = 0;
 
-function hello(){
 
-    console.log("hello I am here")  
-    function abc(){
-        console.log("I am here abc")
-    } 
-    abc()
-}
+// function hello(){
 
-const greet =()=>{
-    // function expression 
-}
-hello()
+//     console.log("hello I am here")  
+//     function abc(){
+//         console.log("I am here abc")
+//     } 
+//     abc()
+// }
 
-for(var i=0;i<10;i++){
-    setTimeout(()=>{
-        console.log(i)
-    },2000)
-}
+// const greet = function ()=>{
+//     // function expression 
+// }
+// hello()
+
+// for(var i=0;i<10;i++){
+//     setTimeout(()=>{
+//         console.log(i)
+//     },2000)
+// }
 // var i=0;
 // console.log("hello Start",i)
 
@@ -1001,6 +1002,178 @@ for(var i=0;i<10;i++){
 //     console.log("hello I am 2 ",i)
     
 // },1000)
+// function abc(){
+//     console.log("Hello")
+// }
+// abc()
+
+
+// // ss()
+// console.log(ss)
+// var ss = function(){
+//     console.log("hello ss")
+// }
+
+// function abc(s,...a){
+//     console.log(a)
+//     console.log("Hello")
+// }
+// abc(1,2)
+
+// Pass By value / Pass by Reference 
+
+// let a = 1;
+// let b = 2;
+// console.log("a= ",a)
+// console.log("b= ",b)
+
+// b = a; // coping the value 
+
+// a++
+// b = a;
+
+// console.log("a= ",a)
+// console.log("b= ",b)
+
+// let s = {
+//     name:"Siva",
+//     hobbies:{
+//         coding:7,
+//         garderning:3
+//     }
+// }
+// let p = {
+//     name:"Pooja",
+//     hobbies:{
+//         coding:2,
+//         IT:7,
+//         maths:3
+//     }
+// }
+
+// console.log("s = ",s)
+// console.log("p = ",p)
+
+// // s = p; // call by reference 
+// // s = {...p}
+// // s = Object.assign({},p) // shallow cloning
+// // s = JSON.parse(JSON.stringify(p)) // deep cloning
+// // s =  JSON.parse(JSON.stringify())
+// s = structuredClone(p) // deep cloning
+
+
+// // structuredClone
+// p.name = "Teja"
+// p.hobbies.coding = 10
+
+// console.log("s = ",s)
+// console.log("p = ",p)
+
+// clousers
+
+
+// function abc(){
+//     let i = 0;
+//     return function(){
+//         console.log("Value of I is ",++i)
+//     }
+// }
+// let s = abc();
+// s()
+// s()
+// s()
+// s()
+
+
+// const  NuclearLaunchCode = function(){
+//     let timepassed = 0;
+//     function launch(){
+//         console.log("BOOOM 🔥🔥🔥🔥")
+//     }
+//     function whatTime(){
+//         console.log("timepassed = ",timepassed)
+//     }
+//     setInterval(()=>{timepassed++},1000)
+
+//     return{
+//         whatTime
+//     }
+// }
+// let fun = NuclearLaunchCode()
+// console.log(fun.whatTime)
+
+// function aa(){
+//     console.log("hhe")
+// }
+// aa()
+// aa.age = 32;
+// console.log(aa)
+
+
+// let specialObject = {
+//     name:aa,
+//     age:22
+        // ()=> {console.log("hee")}
+// }
+
+// let hero = {
+//     name:"Thor",
+//     attack(){
+//         console.log("this is attack from",this.name)
+//     }
+// }
+// let p = Object.create(hero)
+// // p.name = "KL Rahul"
+// // p.batting = function(){
+// //     console.log("Batting by ",this.name)
+// // }
+
+// // Array.__proto__ = hero
+
+
+// console.log(p)
+// console.log(Object.isPrototypeOf(Array))
+// for(key in p){
+//     // if(p.hasOwnProperty(key))
+//         console.log(key,p[key])
+// }
+
+// high order function
+// let ar = [1,2,3,4,2]
+// "1 🚀","2 🚀","3 🚀","4 🚀","2 🚀"
+// let i = ar.map((p)=>p*p)
+// console.log(ar)
+// console.log(i)
+
+
+// --------
+// [1,2,3]
+// let sum =0
+// for i to n 
+// sum += a[i]
+
+// let sum = ar.reduce((total,current)=>total+current,0)
+
+
+let ar = [1,2,3,4,2]
+// "1 🚀","2 🚀","3 🚀","4 🚀","2 🚀"
+Array.prototype.map = function(){
+        let a =[];
+        console.log(this)
+        for(let i=0;i<this.length;i++){
+            a.push(this[i]+'🚀')
+        }
+        return a;
+}
+Date.prototype.lastYear = function(){
+    return this.getFullYear() -1
+}
+console.log(ar.map())
+
+let d = new Date("2022-03-25")
+console.log(d.lastYear())
+console.log(d.getFullYear()-1)
+
 
 
 
