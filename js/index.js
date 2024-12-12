@@ -1155,26 +1155,162 @@
 // let sum = ar.reduce((total,current)=>total+current,0)
 
 
-let ar = [1,2,3,4,2]
-// "1 🚀","2 🚀","3 🚀","4 🚀","2 🚀"
-Array.prototype.map = function(){
-        let a =[];
-        console.log(this)
-        for(let i=0;i<this.length;i++){
-            a.push(this[i]+'🚀')
-        }
-        return a;
+// let ar = [1,2,3,4,2]
+// // "1 🚀","2 🚀","3 🚀","4 🚀","2 🚀"
+// Array.prototype.map = function(){
+//         let a =[];
+//         console.log(this)
+//         for(let i=0;i<this.length;i++){
+//             a.push(this[i]+'🚀')
+//         }
+//         return a;
+// }
+// Date.prototype.lastYear = function(){
+//     return this.getFullYear() -1
+// }
+// console.log(ar.map())
+
+// let d = new Date("2022-03-25")
+// console.log(d.lastYear())
+// console.log(d.getFullYear()-1)
+
+
+// let ironMan = {
+//     name:"IronMan",
+//     weapon:"Suit with blasters",
+
+//     attack(){
+//         return this.name+" is attacking by its "+this.weapon;
+//     }
+// }
+// let thor = {
+//     name:"Thor",
+//     weapon:"Hammer with Thunder",
+//     attack(){
+//         return this.name+" is attacking by its "+this.weapon;
+//     }
+// }
+
+
+// function marvelCharacter(name,weapon){
+//     return {
+//         name:name,
+//         weapon:weapon,
+//         attack(){
+//             return this.name+" is attacking by its "+this.weapon;
+//         }
+//     }
+// }
+// const thor = marvelCharacter("Thor","Hammer")
+// const ironMan = marvelCharacter("IronMan","Suit")
+// const captionAmerica = marvelCharacter("CaptionAmerica","Sheld")
+
+
+// console.log(ironMan)
+// console.log(thor)
+
+// console.log(ironMan.attack())
+// console.log(thor.attack())
+
+// const powers ={
+//     attack(){
+//         return this.name+" is attacking by its "+this.weapon;
+//     },
+//     flying(){
+//         return this.name+" is flying with "+this.weapon;
+//     }
+// }
+
+// function marvelCharacter(name,weapon){
+//     return {
+//         name:name,
+//         weapon:weapon,
+//     }
+// }
+// const thor = marvelCharacter("Thor","Hammer")
+// thor.attack = powers.attack
+// thor.flying = powers.flying
+
+// const ironMan = marvelCharacter("IronMan","Suit")
+// ironMan.attack = powers.attack
+
+// const captionAmerica = marvelCharacter("CaptionAmerica","Sheild")
+// captionAmerica.attack = powers.attack
+
+
+// console.log(thor.flying())
+// console.log(thor)
+
+// console.log(ironMan.attack())
+// console.log(thor.attack())
+// console.log(captionAmerica.attack())
+
+
+
+
+// const powers ={
+//     attack(){
+//         return this.name+" is attacking by its "+this.weapon;
+//     },
+//     flying(){
+//         return this.name+" is flying with "+this.weapon;
+//     }
+// }
+
+// function marvelCharacter(name,weapon){
+//     let obj = Object.create(powers) 
+//     obj.name = name;
+//     obj.weapon = weapon;
+//     return obj;
+// }
+// const thor = marvelCharacter("Thor","Hammer")
+
+// const ironMan = marvelCharacter("IronMan","Suit")
+
+// const captionAmerica = marvelCharacter("CaptionAmerica","Sheild")
+
+
+// console.log(thor.flying())
+// console.log(thor)
+
+// console.log(ironMan.attack())
+// console.log(thor.attack())
+// console.log(captionAmerica.attack())
+
+
+
+const powers ={
+    attack(){
+        return this.name+" is attacking by its "+this.weapon;
+    },
+    flying(){
+        return this.name+" is flying with "+this.weapon;
+    }
 }
-Date.prototype.lastYear = function(){
-    return this.getFullYear() -1
+
+function MarvelCharacter(name,weapon){
+    this.name = name;
+    this.weapon = weapon;
+
 }
-console.log(ar.map())
 
-let d = new Date("2022-03-25")
-console.log(d.lastYear())
-console.log(d.getFullYear()-1)
+MarvelCharacter.prototype.attack = powers.attack
+MarvelCharacter.prototype.flying = powers.flying
+
+const thor = new MarvelCharacter("Thor","Hammer")
+
+const ironMan = new MarvelCharacter("IronMan","Suit")
+
+const captionAmerica = new MarvelCharacter("CaptionAmerica","Sheild")
 
 
-
+console.log(thor.attack())
+console.log(thor)
+for(prop in thor){
+    console.log(prop, thor[prop])
+}
+// console.log(ironMan.attack())
+// console.log(thor.attack())
+// console.log(captionAmerica.attack())
 
 
