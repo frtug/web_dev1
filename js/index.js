@@ -1086,14 +1086,15 @@
 
 
 // const  NuclearLaunchCode = function(){
-//     let timepassed = 0;
+    
+//     let timepassed = 200;
 //     function launch(){
 //         console.log("BOOOM 🔥🔥🔥🔥")
 //     }
 //     function whatTime(){
 //         console.log("timepassed = ",timepassed)
 //     }
-//     setInterval(()=>{timepassed++},1000)
+//     setInterval(()=>{timepassed--},1000)
 
 //     return{
 //         whatTime
@@ -1279,38 +1280,158 @@
 
 
 
-const powers ={
-    attack(){
-        return this.name+" is attacking by its "+this.weapon;
-    },
-    flying(){
-        return this.name+" is flying with "+this.weapon;
+// const powers ={
+//     attack(){
+//         return this.name+" is attacking by its "+this.weapon;
+//     },
+//     flying(){
+//         console.log(this) // object who is calling this
+//         // let self = this
+//         // return function(){
+//         //     console.log(this) // global
+//         //     return self.name+" is flying with "+self.weapon;
+//         // }
+
+//         // ---------------------
+//         // return function(){
+//         //     console.log(this) // global
+//         //     return this.name+" is flying with "+this.weapon;
+//         // }.bind(this)
+
+//         // ----------------
+//         let f = function(){
+//             console.log(this) // global
+//             return this.name+" is flying with "+this.weapon;
+//         }
+//         return f.bind(this);
+//     }
+// }
+
+// function MarvelCharacter(name,weapon){
+        // this.i = 1;
+//     this.name = name;
+//     this.weapon = weapon;
+
+// }
+
+// MarvelCharacter.prototype = {...MarvelCharacter.prototype,...powers}
+// // MarvelCharacter.prototype.flying = powers.flying
+
+// const thor = new MarvelCharacter("Thor","Hammer")
+
+// const ironMan = new MarvelCharacter("IronMan","Suit")
+
+// const captionAmerica = new MarvelCharacter("CaptionAmerica","Sheild")
+
+
+// console.log(thor.attack())
+// console.log(thor)
+
+// let t = {}
+
+// for(prop in thor){
+//     console.log(prop, thor[prop])
+// }
+
+// console.log(ironMan.attack())
+// console.log(thor.attack())
+// console.log(thor.flying()())
+
+// let a = 10;
+// let n = new Number(4)
+
+// String 
+// Boolean 
+// Symbol('')
+// BigInt()
+
+// class MarvelCharacter{
+//     constructor(name,weapon){
+//         this.name = name;
+//         this.weapon = weapon;
+//     }
+//     attack(){
+//         return this.name+" is attacking by its "+this.weapon;
+//     }
+// }
+
+// let thor = new MarvelCharacter("Thor","Hammer")
+// let ironMan = new MarvelCharacter("ironMan","Suit")
+
+// console.log(thor instanceof(MarvelCharacter))
+
+
+// console.log(thor.attack())
+
+//  create A Car class with dynamically creating object with values color, engine, type
+
+// Car 
+// let lightCar = new Car("red","VZIII","Light Duty Veichle")
+// let HeavyCar = new Car("red","XBWW","Heavy Duty Veichle")
+
+
+class Car{
+    #chasis = "XXXIIIV"
+
+    constructor(name,color,engine,type){
+        this.name=name;
+        this.color=color;
+        this.engine=engine;
+        this.type=type;
+    }
+    #getChasisNumber(){
+        return this.#chasis
+    }
+    AuthorizedAccessChasis(s){
+        if(s === "778083"){
+            return this.#getChasisNumber();
+        }
+        else {
+            return "Secret Value is not right, try again"
+        }
+    }
+
+    static setColor(color){
+        this.color = color
+        return "setting the color Successfully "+ this.color;
+    }
+    getColor(){
+        return this.color;
+    }
+}
+class Truck extends Car{
+    constructor(name,color,engine,type,drive){
+        super(name,color,engine,type)
+        this.drive =drive
+    }
+    setDrive(drive){
+        console.log(super.getColor())
+        this.drive = drive;
     }
 }
 
-function MarvelCharacter(name,weapon){
-    this.name = name;
-    this.weapon = weapon;
+let t1 = new Truck("audi","Green",5,"Heavy","4x4")
+Truck.setColor("Black")
+t1.setDrive("2x2")
+// console.log(t1.#chasis)
 
-}
-
-MarvelCharacter.prototype.attack = powers.attack
-MarvelCharacter.prototype.flying = powers.flying
-
-const thor = new MarvelCharacter("Thor","Hammer")
-
-const ironMan = new MarvelCharacter("IronMan","Suit")
-
-const captionAmerica = new MarvelCharacter("CaptionAmerica","Sheild")
+console.log(t1.AuthorizedAccessChasis("778083"))
+console.log(t1)
 
 
-console.log(thor.attack())
-console.log(thor)
-for(prop in thor){
-    console.log(prop, thor[prop])
-}
-// console.log(ironMan.attack())
-// console.log(thor.attack())
-// console.log(captionAmerica.attack())
 
 
+
+let c1 = new Car("audi","red",4,"light")
+// console.log(c1.#getChasisNumber())
+
+// console.log(c1.#chasis)
+// // c1.color = "black"
+// console.log(c1.getColor())
+// console.log(c1.setColor("Blue"))
+// console.log(c1.getColor())
+
+// let c2 = new Car("suzuki","red",2,"heavy")
+
+// console.log(c1)
+// console.log(c2)
