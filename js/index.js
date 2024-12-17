@@ -1370,61 +1370,74 @@
 // let HeavyCar = new Car("red","XBWW","Heavy Duty Veichle")
 
 
-class Car{
-    #chasis = "XXXIIIV"
+// class Car{
+//     #chasis = "XXXIIIV" // private 
 
-    constructor(name,color,engine,type){
-        this.name=name;
-        this.color=color;
-        this.engine=engine;
-        this.type=type;
-    }
-    #getChasisNumber(){
-        return this.#chasis
-    }
-    AuthorizedAccessChasis(s){
-        if(s === "778083"){
-            return this.#getChasisNumber();
-        }
-        else {
-            return "Secret Value is not right, try again"
-        }
-    }
+//     constructor(name,color,engine,type){
+//         this.name=name;
+//         this.color=color;
+//         this.engine=engine;
+//         this.type=type;
+//     }
+//     #getChasisNumber(){
+//         return this.#chasis
+//     }
+//      AuthorizedAccessChasis(s){
+//         if(s === "778083"){
+//             return this.#getChasisNumber();
+//         }
+//         else {
+//             return "Secret Value is not right, try again"
+//         }
+//     }
+//     // CustomizeTire(tire){
+//     //     console.log(tire)
+//     // }
+//     CustomizeTire(tire,...args){
+//         if(args.length == 2){
+//             console.log(tire,args)
+//         }
+//         else if(args.length == 1){
+//             console.log(tire,"second value",args)
+//         }
+//         else console.log(tire);
+//     }
 
-    static setColor(color){
-        this.color = color
-        return "setting the color Successfully "+ this.color;
-    }
-    getColor(){
-        return this.color;
-    }
-}
-class Truck extends Car{
-    constructor(name,color,engine,type,drive){
-        super(name,color,engine,type)
-        this.drive =drive
-    }
-    setDrive(drive){
-        console.log(super.getColor())
-        this.drive = drive;
-    }
-}
+//     static setColor(color){
+//         this.color = color
+//         return "setting the color Successfully "+ this.color;
+//     }
+//     getColor(){
+//         return this.color;
+//     }
+// }
+// class Truck extends Car{
+//     constructor(name,color,engine,type,drive){
+//         super(name,color,engine,type)
+//         this.drive =drive
+//     }
+//     setDrive(drive){
+//         console.log(super.getColor())
+//         this.drive = drive;
+//     }
+    
+    
+// }
 
-let t1 = new Truck("audi","Green",5,"Heavy","4x4")
-Truck.setColor("Black")
-t1.setDrive("2x2")
-// console.log(t1.#chasis)
+// let t1 = new Truck("audi","Green",5,"Heavy","4x4")
+// Truck.setColor("Black")
+// t1.setDrive("2x2")
+// // console.log(t1.#chasis)
+// t1.CustomizeTire("LargeTire")
+// t1.CustomizeTire("Large Tire","6x6")
 
-console.log(t1.AuthorizedAccessChasis("778083"))
-console.log(t1)
+// console.log(t1.AuthorizedAccessChasis("778083"))
+// console.log(t1)
 
 
-
-
-
-let c1 = new Car("audi","red",4,"light")
+// let c1 = new Car("audi","red",4,"light")
 // console.log(c1.#getChasisNumber())
-
+// console.log(Truck.CustomizeTire("heavy ...."))
 // console.log(c1.#chasis)
 // // c1.color = "black"
 // console.log(c1.getColor())
@@ -1435,3 +1448,149 @@ let c1 = new Car("audi","red",4,"light")
 
 // console.log(c1)
 // console.log(c2)
+
+// // 
+// let s=[1,2,4,2,42]
+// // function fp(a,b){
+// //     return a*b
+// // }
+
+// let parrot = true;
+// function ss(s,parrot){
+//     parrot = false;
+//     console.log(parrot)
+//     // let a= []
+
+//     for(let i=0;i<10;i++){
+//         console.log(s[i])
+//     }
+    
+
+//     s.forEach((element,i) => {
+//         console.log(element)
+//         s[i] *= element
+//     });
+
+//     let a = s.map((element) => {
+//        return element *= element
+//     });
+//     console.log(a)
+//     return a
+// }
+// // s = fp(2,5);
+// let p = ss(s,parrot)
+// console.log(s)
+// // let [a,b] = [3,4]
+
+
+// console.log("aa")
+// setTimeout(()=>console.log("hello"),100)
+// console.log("bb")
+
+ 
+
+
+// catch 
+// promise
+
+
+// moveSiva("right","10",function(){
+//     return moveSiva("left","10",function(){
+//         return true
+//     } )
+// })
+
+
+// insta('/posts', ()=>{
+//     if(error){
+//         console.log("error")
+//         throw Error;
+//     }
+//     return function insta('/posts/users', ()=>{
+//         if(error){
+//             console.log("error")
+//             throw Error;
+//         }
+
+//     })
+// })
+
+// console.log("Hello Start")
+// setTimeout(()=>{console.log("Hello setTImeout start")},1000)
+// let promise = new Promise((resolve,reject)=>{
+//     if(true)
+//         resolve("I accept your promise")
+//     else resolve("I accept your promise")
+
+// })
+// // promise.then((res)=>console.log(res))
+
+// // setTimeout(()=>{console.log("Hello setTImeout Middle")},0)
+
+
+// promise
+// .then((d)=> d+"!")
+// .then((r)=> d+"!!")
+// .then((r)=>console.log(r))
+// .catch((err)=>{console.log("Opps error"); return -1})
+// .then((f)=>{ console.log(f)})
+// .finally(()=>console.log("i am ending this promise"))
+
+// async
+
+// let p1 = new Promise((resolve,reject)=>
+//     setTimeout(resolve,1000,"Hi I am p1")
+// )
+// let p2 = new Promise((resolve,reject)=>
+//     setTimeout(resolve,2000,"Hi I am p1")
+// )
+// let p3 = new Promise((resolve,reject)=>
+//     setTimeout(reject,4000,"Hi I am p1")
+// )
+
+// Promise.all([p1,p2,p3]).then((result)=> console.log(result))
+// // await 
+
+// fetch('https://jsonplaceholder.typicode.com/posts')
+// .then((res)=> res.json())
+// .then((data)=> console.log(data))
+
+
+// let urls = [
+//     "https://jsonplaceholder.typicode.com/posts",
+//     "https://jsonplaceholder.typicode.com/comments",
+//     "https://jsonplaceholder.typicode.com/albums"
+// ]
+// let data;
+// // Promise.all(urls.map((url)=>
+// //     fetch(url).then(result => result.json()).then((e)=> data = e))
+// // )
+// Promise.allSettled
+// Promise.race()
+// Promis
+// let p = Promise.all(urls.map((url)=>
+//     fetch(url))
+// )
+// p.then((result) => JSON.stringify(result)).then((res) => console.log(res))
+// // console.log(p)
+
+// fetch from api's
+
+
+// async function fetchPromise(){
+//     let promise = new Promise((resolve,reject)=>{
+//         if(true)
+//             resolve("I accept your promise")
+//         else resolve("I accept your promise")
+//     })
+//     let p = await promise;
+//     console.log(p)
+// }
+// fetchPromise();
+// let promise = new Promise((resolve,reject)=>{
+//     if(true)
+//         resolve("I accept your promise")
+//     else resolve("I accept your promise")
+
+// })
+
