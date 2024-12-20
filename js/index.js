@@ -1449,7 +1449,7 @@
 // console.log(c1)
 // console.log(c2)
 
-// // 
+// 
 // let s=[1,2,4,2,42]
 // // function fp(a,b){
 // //     return a*b
@@ -1572,7 +1572,7 @@
 //     fetch(url))
 // )
 // p.then((result) => JSON.stringify(result)).then((res) => console.log(res))
-// // console.log(p)
+// console.log(p)
 
 // fetch from api's
 
@@ -1594,3 +1594,212 @@
 
 // })
 
+
+
+// let urls = [
+//     "https://jsonplaceholder.typicode.com/posts",
+//     "https://jsonplaceholder.typicode.com/comments",
+//     "https://jsonplaceholder.typicode.com/albums"
+// ]
+// async function fetchPromises() {
+//     try{
+//         let [posts,comments,albums] =  await Promise.all(urls.map( async function (url){
+//             let res = await fetch(url);
+//             // console.log(res.json())
+//             return res.json()
+//         }))
+//         console.log("posts",posts)
+//         console.log("comments",comments)
+//         console.log("albums",albums)
+//     }
+//     catch(error){
+//         console.log("Error occcoured here ",error)
+//     }
+// }
+
+// async function fetchPromises2(){
+//     const arrayOfPromises  = urls.map((url)=> fetch(url))
+//     for await(let req of arrayOfPromises){
+//         const data = await req.json()
+//         console.log(data)
+//     }
+// }
+
+
+
+
+// let p1 = new Promise((resolve,reject)=>
+//     setTimeout(resolve,1000,"Hi I am p1")
+// )
+// let p2 = new Promise((resolve,reject)=>
+//     setTimeout(resolve,1000,"Hi I am p2")
+// )
+// let p3 = new Promise((resolve,reject)=>
+//     setTimeout(resolve,4000,"Hi I am p3")
+// )
+
+// async function fetchPromises2(){
+//     const arrayOfPromises  = [p1,p2,p3]
+//     for await(let req of arrayOfPromises){
+//         const data = await req
+//         console.log(data)
+//     }
+// }
+
+// fetchPromises2()
+
+
+// function promisify(item,delay){ 
+//     return new Promise((resolve,reject)=>
+//     {
+//             if(item == "Teja"){
+//                 return setTimeout(()=>reject(item),delay)
+//             }
+//         else return setTimeout(()=>resolve(item),delay)
+
+//     }
+//     )
+// }
+
+// const a = ()=> promisify('adarsh',1000) // deduct the money  from the sender 
+
+// const b = ()=> promisify('Siva',100) // // send the money  from the reciver  
+// const c = ()=>  promisify('Teja',4000) // update the entries of their bank 
+
+
+// async function parallel(){
+//     const promises = [a(),b(),c()];
+//     const [o1,o2,o3] = await Promise.all(promises)
+//     console.log(` result of the parallel execution is ${o1}, ${o2}, ${o3}`)
+// }
+
+
+// async function Racing(){
+//     const promises = [a(),b(),c()];
+//     const o1 = await Promise.race(promises)
+//     console.log(` result of the race condition is ${o1}`)
+// }
+
+// async function Sequence(){
+//     const promises = [a(),b(),c()];
+//     const o1 = await a();
+//     const o2 = await b();
+//     const o3 = await c();
+
+//     console.log(` result of the sequence condition is ${o1}, ${o2}, ${o3}`)
+// }
+// Sequence() // user data -> user profile -> send a message 
+// Racing()
+// parallel()
+
+// Promise.allSettled
+
+
+
+// async function allSettledPromise(){
+//     try{
+//         const promises = [a(),b(),c()];
+//         const [o1,o2,o3] = await Promise.allSettled(promises)
+//         if(o1.value === 'adarsh'){
+//             throw Error("I can't have this value for now");
+//         }
+//         console.log(o1)
+//         console.log(o2)
+//         console.log(o3)
+//     }
+//     catch(err){
+//         console.log("Found an error",err)
+
+//     }
+    
+
+
+// }
+// allSettledPromise()
+
+
+// let e = new Error("Message is secret, i can't share");
+// console.log(e.message)
+// console.log(e.name)
+// console.log(e.stack)
+
+// throw ReferenceError('')
+// class AuthenticationError extends Error{
+//     constructor(msg,group,info){
+//         super(msg)
+//         // this.message = msg
+//         this.group = group
+//         this.info = info
+//     }
+// }
+// let ae = new AuthenticationError('I am a Authentication Error',["siva","Adarsha","Teja","pooja"],
+//     "Whenever You find some Authentication Error related problem")
+
+// console.log(ae)
+
+
+
+
+// Regx 
+
+// let text = " I am hare I am B HI";
+// let pattern = /a+/i;
+// let result = text.match(pattern);
+
+// console.log(result)
+
+
+// let text2 = "Hello world!";
+
+// // look for "Hello"
+// let result1 = /Hello/.exec(text2);
+
+// // look for "W3Schools"
+// let result2 = /W3Schools/.exec(text2);
+
+// console.log(result1)
+
+
+// let text3 = "Mr.Blue has a blue house";
+// let position = text3.search(/e\b/);
+
+// console.log(position)
+
+
+// match() []
+// search() indexno or -1
+
+// pattern.exec() []
+// test() -> true false 
+
+// const text = "SDJHSJ#^&#$aie"
+// const pattern = /b*/;
+// const myArray =text.match(pattern);
+
+// let text = "1, 100 or 1000 43 3400 3440 200?"; 
+// let pattern = /10*/g;
+// let result = text.match(pattern);
+
+// let pattern1 = /10*/g;
+// let result2 = pattern1.exec(text)
+
+// // let result = pattern.test(text);
+// console.log(result)
+// console.log(result2)
+
+// #78@saving_ryan$
+
+// right email and will password regulation 0-9 1sp, 16 character 
+// let s="listen"
+// let str = s.toLowerCase().replace(/[^a-z0-9]/g, '')
+// console.log(str)
+
+
+fetch('https://jsonplaceholder.typicode.com/posts',{})
+.then((res)=> res.json())
+.then((data)=> console.log(data))
+
+// const url = 'https://api.tomorrow.io/v4/weather/forecast?location=Bangalore&timesteps=1d&apikey=H61vqaWSocSafnAPtlUNgudEorDPGenL';
+// const options = {method: 'GET', headers: {accept: 'application/json',}};
+
+fetch(url,option)
