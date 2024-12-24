@@ -1795,11 +1795,12 @@
 // console.log(str)
 
 
-fetch('https://jsonplaceholder.typicode.com/posts',{})
-.then((res)=> res.json())
-.then((data)=> console.log(data))
+// fetch('https://jsonplaceholder.typicode.com/posts',{})
+// .then((res)=> res.json())
+// .then((data)=> console.log(data))
 
-// const url = 'https://api.tomorrow.io/v4/weather/forecast?location=Bangalore&timesteps=1d&apikey=H61vqaWSocSafnAPtlUNgudEorDPGenL';
-// const options = {method: 'GET', headers: {accept: 'application/json',}};
+// // const url = 'https://api.tomorrow.io/v4/weather/forecast?location=Bangalore&timesteps=1d&apikey=H61vqaWSocSafnAPtlUNgudEorDPGenL';
+// // const options = {method: 'GET', headers: {accept: 'application/json',}};
 
-fetch(url,option)
+// fetch(url,option)
+
