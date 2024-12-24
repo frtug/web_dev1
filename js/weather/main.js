@@ -44,6 +44,7 @@ async function fetchData(){
         console.log(values)
         console.log(time)
         
+        // html goes here....
         console.log(findValues(values))
         
     });
