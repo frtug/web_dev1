@@ -3,16 +3,20 @@
 import './App.css'
 
 
-function Card({name,url}){
+function App({name,username}){
   return(
-    <>
+    
+    <div className='bg-light-purple ma3'>
+      <h2 className=''>{name }</h2>
+      <img src={`https://robohash.org/${username}?size=200x200`} alt="robot" />
 
-    <h1 style={{color:"red"}} className='card'>{name }</h1>
-    <img src={url} alt="robot" />
-
-    </>
+    </div>
+    
+    
   )
 }
+export default App
+
 
 // function App(props) {
 //   // const [message,setMessage] = useState(props.msg) // hooks
@@ -48,4 +52,3 @@ function Card({name,url}){
 //   }
   
 // }
-export default Card
